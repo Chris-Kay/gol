@@ -1,0 +1,11 @@
+{
+  "name": "game-of-life",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jasmine": "*",
+    "grunt-contrib-jshint": "*"
+  },
+  "scripts": { "test": "grunt test" }  
+}
