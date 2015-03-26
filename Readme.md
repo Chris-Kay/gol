@@ -23,15 +23,12 @@ C:\Users\tvp\Desktop\candidate-javascript-1
 
 3) Run setup-javascript.bat and wait until it finishes
 
-4) Runfor each language setup-java.bat and wait until it finishes
-
+4) Run setup-java.bat and wait until it finishes
 
 
 #### The setup scripts, once initiated, will create maximum of 2 candidate directories per programming language. Ie. it's not possible to create 3 java directories at the same time. 
 
 #### The setup scripts sole purpose is to setup the directory structure and copy required files. 
-
-
 
 It is assumed that machine comes preinstalled with : 
 
@@ -39,7 +36,7 @@ It is assumed that machine comes preinstalled with :
   - NodeJS and NPM installed
   - Grunt installed globally
 
-Additioanl Software Required:
+Additional Software Required:
   - IntelliJ
   - Eclipse
   - Sublime Text (for javascript)    
