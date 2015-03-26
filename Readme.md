@@ -1,8 +1,6 @@
 #Recruitment Day Katas setup script
 
-This document explains how to setup a recruitment machine.
-
-
+This document explains how to setup a recruitment machine. It is assumed you will run the examples on Windows machine. Windows 7+ is supported. 
 
 ##Where on the drive are Recruitment Katas stored?
 
