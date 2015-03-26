@@ -17,13 +17,13 @@ C:\Users\tvp\Desktop\candidate-javascript-1
 
 ##Preparing the machine:
 
-###1) Before you start with setting up a new candidate make sure that previous candidate files are deleted from the Desktop. 
+1) Before you start with setting up a new candidate make sure that previous candidate files are deleted from the Desktop. 
 
-###2) Decide which programming languages you will need on a machine. For this readme we will setup one javascript candidate and one java.
+2) Decide which programming languages you will need on a machine. For this readme we will setup one javascript candidate and one java.
 
-###3) Run setup-javascript.bat and wait until it finishes
+3) Run setup-javascript.bat and wait until it finishes
 
-###4) Runfor each language setup-java.bat and wait until it finishes
+4) Runfor each language setup-java.bat and wait until it finishes
 
 
 
