@@ -40,6 +40,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
 
+  config.vm.provision "shell" do |s|
+    s.inline = "sudo aptitude -y install libmoose-perl"
+    s.inline = "mkdir -p ~/coding-test/lib/BBC/GameOfLife"
+    s.inline = "mkdir -p ~/coding-test/t/BBC/GameOfLife"
+  end
+
+  config.vm.provision "file", source: "../lib/BBC/GameOfLife/Cell.pm", destination: "~/coding-test/lib/BBC/GameOfLife/Cell.pm"
+  config.vm.provision "file", source: "../lib/BBC/GameOfLife/Life.pm", destination: "~/coding-test/lib/BBC/GameOfLife/Life.pm"
+  config.vm.provision "file", source: "../t/BBC/GameOfLife/cell_test.t", destination: "~/coding-test/t/BBC/GameOfLife/cell_test.t"
+  config.vm.provision "file", source: "../t/BBC/GameOfLife/life_test.t", destination: "~/coding-test/t/BBC/GameOfLife/life_test.t"
+  config.vm.provision "file", source: "../run_tests.sh", destination: "~/coding-test/run_tests.sh"
+
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
