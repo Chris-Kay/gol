@@ -23,5 +23,10 @@ After running setup, the system should be at a bash prompt.  This will be in the
 
 In keeping with the other tests no additional documentation has been provided, in particular the *perldoc* command won't be available.  If this is deemed a necessary item then it can be installed by manually running `sudo -E aptitude install perl-doc`.
 
+The tests themselves can be run with
+    $ cd ~/coding-test'
+    $ ./run_tests.sh'
+
+
 If the candidate accidentally presses CTRL-D or otherwise exits the Vagrant virtual host then they can be reconnected with a simple `vagrant ssh`.
 
