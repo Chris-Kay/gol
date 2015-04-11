@@ -42,6 +42,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision "shell" do |s|
     s.inline = "sudo aptitude -y install libmoose-perl"
+    s.inline = "rm -rf ~/coding-test"
     s.inline = "mkdir -p ~/coding-test/lib/BBC/GameOfLife"
     s.inline = "mkdir -p ~/coding-test/t/BBC/GameOfLife"
   end
