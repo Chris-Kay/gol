@@ -29,5 +29,5 @@ fi
 
 
 set -x
-sudo aptitude -y install libmoose-perl
+sudo -E aptitude -y install libmoose-perl
 
