@@ -42,16 +42,20 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision "shell" do |s|
     s.inline = "sudo aptitude -y install libmoose-perl"
-    s.inline = "rm -rf ~/coding-test"
-    s.inline = "mkdir -p ~/coding-test/lib/BBC/GameOfLife"
-    s.inline = "mkdir -p ~/coding-test/t/BBC/GameOfLife"
+    s.inline = "sudo rm -rf /home/vagrant/coding-test"
+    s.inline = "sudo mkdir -p /home/vagrant/coding-test/lib/BBC/GameOfLife"
+    s.inline = "sudo mkdir -p /home/vagrant/coding-test/t/BBC/GameOfLife"
   end
 
-  config.vm.provision "file", source: "../lib/BBC/GameOfLife/Cell.pm", destination: "~/coding-test/lib/BBC/GameOfLife/Cell.pm"
-  config.vm.provision "file", source: "../lib/BBC/GameOfLife/Life.pm", destination: "~/coding-test/lib/BBC/GameOfLife/Life.pm"
-  config.vm.provision "file", source: "../t/BBC/GameOfLife/cell_test.t", destination: "~/coding-test/t/BBC/GameOfLife/cell_test.t"
-  config.vm.provision "file", source: "../t/BBC/GameOfLife/life_test.t", destination: "~/coding-test/t/BBC/GameOfLife/life_test.t"
-  config.vm.provision "file", source: "../run_tests.sh", destination: "~/coding-test/run_tests.sh"
+  config.vm.provision "shell" do |s|
+    s.inline = "sudo chown -R vagrant:vagrant /home/vagrant/coding-test"
+  end
+
+  config.vm.provision "file", source: "../lib/BBC/GameOfLife/Cell.pm", destination: "/home/vagrant/coding-test/lib/BBC/GameOfLife/Cell.pm"
+  config.vm.provision "file", source: "../lib/BBC/GameOfLife/Life.pm", destination: "/home/vagrant/coding-test/lib/BBC/GameOfLife/Life.pm"
+  config.vm.provision "file", source: "../t/BBC/GameOfLife/cell_test.t", destination: "/home/vagrant/coding-test/t/BBC/GameOfLife/cell_test.t"
+  config.vm.provision "file", source: "../t/BBC/GameOfLife/life_test.t", destination: "/home/vagrant/coding-test/t/BBC/GameOfLife/life_test.t"
+  config.vm.provision "file", source: "../run_tests.sh", destination: "/home/vagrant/coding-test/run_tests.sh"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
