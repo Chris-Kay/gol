@@ -7,11 +7,11 @@ module GameOfLife
     attr_accessor :live_cells
 
     #Initialize with an array of Cell objects
-    def initialize( initial_live_cells )
+    def initialize(initial_live_cells)
       @live_cells = initial_live_cells.to_set
     end
 
-    def self.cell_should_survive( num_neighbours )
+    def self.cell_should_survive(num_neighbours)
       raise "Not Implemented"
     end  
     

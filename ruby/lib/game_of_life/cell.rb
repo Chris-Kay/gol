@@ -1,16 +1,16 @@
 module GameOfLife
 
-    #Represents a live cell
+  # Represents a live cell
   class Cell
     attr_accessor :x
     attr_accessor :y
     
-    def initialize( x, y )
+    def initialize(x, y)
       @x = x
       @y = y
     end
     
-    def ==( other )
+    def ==(other)
       @x == other.x && @y == other.y
     end
     
