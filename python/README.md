@@ -18,4 +18,4 @@ The unit tests can be run from the project directory by running 'nosetests'. i.e
     
 Individual test files can be run using the following command:
 
-    $ nosetests tests/<TEST_FILE>.py 
+    $ nosetests test/<TEST_FILE>.py 
