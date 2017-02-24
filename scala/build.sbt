@@ -1,4 +1,4 @@
-name := "kata-base"
+name := "game-of-life-kats"
 
 version := "1.0"
 
