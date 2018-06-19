@@ -1,8 +1,8 @@
-#Recruitment Day Katas setup script
+# Recruitment Day Katas setup script
 
 This document explains how to setup a recruitment machine. It is assumed you will run the examples on Windows machine. Windows 7+ is supported. 
 
-##Where on the drive are Recruitment Katas stored?
+## Where on the drive are Recruitment Katas stored?
 
 Recruitment files are stored on the Desktop. 
 
@@ -13,7 +13,7 @@ C:\Users\tvp\Desktop\candidate-javascript-1
 
 
 
-##Preparing the machine:
+## Preparing the machine:
 
 1) Before you start with setting up a new candidate make sure that previous candidate files are deleted from the Desktop. 
 
