@@ -12,7 +12,5 @@ class Life {
     return this.liveCells
   }
 
-  def cellShouldSurvive(numNeighbours: Int): Boolean = {
-    throw new UnsupportedOperationException
-  }
+  def cellShouldSurvive(numNeighbours: Int): Boolean = ???
 }
