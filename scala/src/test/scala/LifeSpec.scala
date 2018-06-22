@@ -1,15 +1,9 @@
-
 import org.scalatest.{FunSpec, Matchers}
-import scala.collection.mutable.HashSet
-
 
 class LifeSpec extends FunSpec with Matchers {
-
   describe("Initialisation") {
     it("creates a set with the correct number of cells") {
-      val setOfCells: HashSet[Cell] = new HashSet[Cell]
-      setOfCells.add(new Cell(1, 1))
-      setOfCells.add(new Cell(2, 2))
+      val setOfCells = Set(Cell(1,1), Cell(2 ,2))
       val life = new Life(setOfCells)
 
       life.getLiveCells.size shouldEqual 2
@@ -18,9 +12,7 @@ class LifeSpec extends FunSpec with Matchers {
 
   describe("Underpopulation") {
     it("?????") {
-      val setOfCells: HashSet[Cell] = new HashSet[Cell]
-      setOfCells.add(new Cell(1, 1))
-      setOfCells.add(new Cell(2, 2))
+      val setOfCells = Set(Cell(1,1), Cell(2 ,2))
       val life = new Life(setOfCells)
 
       life.cellShouldSurvive(0) shouldBe false
