@@ -5,8 +5,7 @@ The following Katas are available for canidates:
 | Language           | IDE / Editor           | Init Command                                       | Test Command      |
 | ------------------ | ---------------------- | -------------------------------------------------- | ----------------- |
 | clojure            | Atom, Sublime, VS Code |                                                    | `boot test`       |
-| java               | IntelliJ, Eclipse      |                                                    |                   |
-| java-maven         | IntelliJ, Eclipse      |                                                    | `mvn test`        |
+| java               | IntelliJ, Eclipse      |                                                    | `mvn test`        |
 | javascript-jasmine | Atom, Sublime, VS Code |                                                    | `./grunt jasmine` |
 | javascript-modern  | Atom, Sublime, VS Code | `npm install`                                      | `npm test`        |
 | javascript-node    | Atom, Sublime, VS Code | `npm install`, `npm install --global gulp`         | `gulp`            |
