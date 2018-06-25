@@ -1,6 +1,7 @@
+*/.idea
+*/.DS_Store
 */node_modules
-**/.DS_Store
-**/.idea
-**/*.iml
-java/bin
-javascript-jasmine/.grunt
+*/*.iml
+*/.grunt
+*/target
+*/project
