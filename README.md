@@ -13,6 +13,8 @@ The following Katas are available for canidates:
 | perl               | Atom, Sublime, VS Code | See `perl/README.md`, **involved** set up process. | `./run_tests.sh`  |
 | python             | Atom, Sublime, VS Code | `pip install nose mock`                            | `nosetests`       |
 | ruby               | Atom, Sublime, VS Code | `gem install rspec`                                | `rspec -fd`       |
+| scala              | IntelliJ, Eclipse      | .                                                  | `sbt test`        |
+
 
 ## Administering Kata
 
