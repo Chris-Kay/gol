@@ -1,8 +1,11 @@
 */.idea
-*/.DS_Store
+.DS_Store
 */node_modules
 */*.iml
 */.grunt
 */target
 */project
 *.pyc
+.vs
+obj
+bin

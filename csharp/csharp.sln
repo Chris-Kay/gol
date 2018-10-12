@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLife", "csharp\GameOfLife.csproj", "{908B3830-4323-4C83-9AE3-4E3E2F795072}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLifeTests", "GameOfLifeTests\GameOfLifeTests.csproj", "{96121A8B-8CFF-4CE3-B51F-2B8C00EF9591}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{908B3830-4323-4C83-9AE3-4E3E2F795072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{908B3830-4323-4C83-9AE3-4E3E2F795072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{908B3830-4323-4C83-9AE3-4E3E2F795072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{908B3830-4323-4C83-9AE3-4E3E2F795072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96121A8B-8CFF-4CE3-B51F-2B8C00EF9591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96121A8B-8CFF-4CE3-B51F-2B8C00EF9591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96121A8B-8CFF-4CE3-B51F-2B8C00EF9591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96121A8B-8CFF-4CE3-B51F-2B8C00EF9591}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
