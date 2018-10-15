@@ -14,5 +14,4 @@ describe Life do
     expect(Life.cell_should_survive(0)).to be false
     expect(Life.cell_should_survive(1)).to be false
   end
-
 end

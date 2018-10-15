@@ -2,16 +2,16 @@
 
 The following Katas are available for canidates:
 
-| Language          | IDE / Editor           | Init Command                               | Test Command |
-| ----------------- | ---------------------- | ------------------------------------------ | ------------ |
-| clojure           | Atom, Sublime, VS Code |                                            | `boot test`  |
-| java              | IntelliJ, Eclipse      |                                            | `mvn test`   |
-| javascript-modern | Atom, Sublime, VS Code | `npm install`                              | `npm test`   |
-| javascript-node   | Atom, Sublime, VS Code | `npm install`, `npm install --global gulp` | `gulp`       |
-| python            | Atom, Sublime, VS Code | `pip install nose mock`                    | `nosetests`  |
-| ruby              | Atom, Sublime, VS Code | `gem install rspec`                        | `rspec -fd`  |
-| scala             | IntelliJ, Eclipse      | .                                          | `sbt test`   |
-| c#                | Visual Studio          | .                                          | `sbt test`   |
+| Language          | IDE / Editor           | Init Command                               | Test Command  |
+| ----------------- | ---------------------- | ------------------------------------------ | ------------- |
+| clojure           | Atom, Sublime, VS Code |                                            | `boot test`   |
+| java              | IntelliJ, Eclipse      |                                            | `mvn test`    |
+| javascript-modern | Atom, Sublime, VS Code | `npm install`                              | `npm test`    |
+| javascript-node   | Atom, Sublime, VS Code | `npm install`, `npm install --global gulp` | `gulp`        |
+| python            | Atom, Sublime, VS Code | `pip install nose mock`                    | `nosetests`   |
+| ruby              | Atom, Sublime, VS Code | `gem install rspec`                        | `rspec -fd`   |
+| scala             | IntelliJ, Eclipse      | .                                          | `sbt test`    |
+| c#                | Visual Studio          | `dotnet restore`                           | `dotnet test` |
 
 Deprecated ones we're trying not to use, but don't currently feel deleting entirely are in the `deprecated` folder:
 
