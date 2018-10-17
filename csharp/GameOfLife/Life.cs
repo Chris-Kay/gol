@@ -1,13 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace GameOfLife
 {
     public class Life
     {
-        public Cell[] State { get; set; }
+        private readonly HashSet<Cell> liveCells;
 
-        public Life(Cell[] initialState)
+        public Life(HashSet<Cell> initialLiveCells)
         {
-            this.State = initialState;
+            this.liveCells = initialLiveCells;
+        }
+
+        public HashSet<Cell> GetLiveCells()
+        {
+            return this.liveCells;
         }
 
         public static bool CellShouldSurvive(int numNeighbours) 
