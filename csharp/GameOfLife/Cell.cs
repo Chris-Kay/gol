@@ -4,17 +4,18 @@ namespace GameOfLife
 {
     public class Cell
     {
-        int x;
-        int y;
+        public int X { get; set; }
+        public int Y { get; set; }
 
-    public Cell(int xCoord, int yCoord)
-    {
-        this.x = xCoord;
-        this.y = yCoord;
-    }
+        public Cell(int xCoord, int yCoord)
+        {
+            this.X = xCoord;
+            this.Y = yCoord;
+        }
 
-        public bool equalTo(Cell other) {
-            return (this.x == other.x) && (this.y == other.y);
+        public bool EqualTo(Cell other) 
+        {
+            return (this.X == other.X) && (this.Y == other.Y);
         }
     }
 }

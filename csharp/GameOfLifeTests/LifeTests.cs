@@ -15,7 +15,7 @@ namespace GameOfLifeTests
             Cell[] initialState = new Cell[] { c1, c2 };
 
             Life life = new Life(initialState);
-            Assert.Equal(life.state, initialState);
+            Assert.Equal(life.State, initialState);
         }
 
         [Fact]

@@ -1,16 +1,17 @@
 ﻿using System;
 namespace GameOfLife
 {
-
     public class Life
     {
-        public Cell[] state;
+        public Cell[] State { get; set; }
+
         public Life(Cell[] initialState)
         {
-            this.state = initialState;
+            this.State = initialState;
         }
 
-        public static bool CellShouldSurvive(int numNeighbours) {
+        public static bool CellShouldSurvive(int numNeighbours) 
+        {
             throw new NotImplementedException();
         }
     }

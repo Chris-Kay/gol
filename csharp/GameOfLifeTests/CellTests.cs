@@ -11,7 +11,7 @@ namespace GameOfLifeTests
             Cell c1 = new Cell(1, 3);
             Cell c2 = new Cell(1, 3);
 
-            Assert.True(c1.equalTo(c2));
+            Assert.True(c1.EqualTo(c2));
         }
 
         [Fact]
@@ -20,7 +20,7 @@ namespace GameOfLifeTests
             Cell c1 = new Cell(1, 3);
             Cell c2 = new Cell(1, 4);
 
-            Assert.False(c1.equalTo(c2));
+            Assert.False(c1.EqualTo(c2));
         }
     }
 }
