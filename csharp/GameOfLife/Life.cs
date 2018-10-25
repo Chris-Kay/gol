@@ -1,16 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace GameOfLife
 {
-
     public class Life
     {
-        public Cell[] state;
-        public Life(Cell[] initialState)
+        private readonly HashSet<Cell> liveCells;
+
+        public Life(HashSet<Cell> initialLiveCells)
         {
-            this.state = initialState;
+            this.liveCells = initialLiveCells;
         }
 
-        public static bool CellShouldSurvive(int numNeighbours) {
+        public HashSet<Cell> GetLiveCells()
+        {
+            return this.liveCells;
+        }
+
+        public static bool CellShouldSurvive(int numNeighbours) 
+        {
             throw new NotImplementedException();
         }
     }

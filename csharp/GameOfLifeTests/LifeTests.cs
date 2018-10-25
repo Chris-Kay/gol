@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using GameOfLife;
 using Xunit;
 
@@ -12,10 +12,10 @@ namespace GameOfLifeTests
             Cell c1 = new Cell(1, 3);
             Cell c2 = new Cell(1, 3);
 
-            Cell[] initialState = new Cell[] { c1, c2 };
+            var initialState = new HashSet<Cell> { c1, c2 };
 
             Life life = new Life(initialState);
-            Assert.Equal(life.state, initialState);
+            Assert.Equal(life.GetLiveCells(), initialState);
         }
 
         [Fact]
