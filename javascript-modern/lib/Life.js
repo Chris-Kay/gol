@@ -24,8 +24,10 @@ module.exports = class Life {
     array.forEach(liveCell => {
       let i;
       let j;
-      for(i = 0; i < maxX; i++) {
-        for(j = 0; j < maxY; j++) {
+      for(i = 0; i < 2; i++) {
+        for(j = -1; j < 2; j++) {
+          if(liveCell + i < maxX || liveCell.y + j > maxY) return 
+
           const numberOfNeighbours = this.getNeighbours(new Cell(liveCell.x + i, liveCell.y + j))
           if(this.cellShouldSurvive(numberOfNeighbours)) {
             if(numberOfNeighbours === 3 || this.getLiveCells().contains(new Cell(liveCell.x + i, liveCell.y + j))) {
