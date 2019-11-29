@@ -42,6 +42,13 @@ describe("Life Tests", function () {
     });
   });
 
+  describe('Creation of life', function() {
+    it('creates life if cell has exactly 3 neighbours', function() {
+      const life = new Life(new HashSet())
+      expect(life.lifeShouldBeCreated(3)).to.equal(true)
+    })
+  })
+
   describe('Evolution', function() {
     it('empty cell will remain empty on evolution', function() {
       const life = new Life(new HashSet());

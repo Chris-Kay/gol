@@ -1,4 +1,5 @@
 "use strict";
+const HashSet = require('./HashSet');
 
 module.exports = class Life {
   constructor(initialLiveCells) {
@@ -15,6 +16,13 @@ module.exports = class Life {
     if(liveCells.size() === 0) {
       return
     }
+  }
+
+  lifeShouldBeCreated(numNeighbours) {
+    if(numNeighbours === 3) {
+      return true
+    }
+    return false
   }
 
   cellShouldSurvive(numNeighbours) {
