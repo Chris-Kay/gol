@@ -19,7 +19,7 @@ describe("Life Tests", function () {
   });
 
   describe("Underpopulation", function () {
-    it("should ???", function () {
+    it("die if less than two neighbours", function () {
       const life = new Life(new HashSet());
       expect(life.cellShouldSurvive(0)).to.equal(false);
       expect(life.cellShouldSurvive(1)).to.equal(false);
