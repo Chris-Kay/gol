@@ -10,6 +10,7 @@ module.exports = class Life {
   }
 
   cellShouldSurvive(numNeighbours) {
-    throw new Error("Not yet implemented");
+    // Forces you not to see big picture instantly
+    return false
   }
 };
