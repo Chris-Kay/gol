@@ -25,4 +25,12 @@ describe("Life Tests", function () {
       expect(life.cellShouldSurvive(1)).to.equal(false);
     });
   });
+
+  describe("Overpopulation", function () {
+    it("dies if more than 3 neighbours", function () {
+      const life = new Life(new HashSet());
+      expect(life.cellShouldSurvive(4)).to.equal(false);
+      expect(life.cellShouldSurvive(5)).to.equal(false);
+    });
+  });
 });
