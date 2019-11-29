@@ -41,4 +41,14 @@ describe("Life Tests", function () {
       expect(life.cellShouldSurvive(3)).to.equal(true);
     });
   });
+
+  describe('Evolution', function() {
+    it('empty cell will remain empty on evolution', function() {
+      const life = new Life(new HashSet());
+      expect(life.getLiveCells().size()).to.equal(0);
+
+      life.evolve()
+      expect(life.getLiveCells().size()).to.equal(0);
+    })
+  })
 });
