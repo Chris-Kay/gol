@@ -11,6 +11,6 @@ module.exports = class Life {
 
   cellShouldSurvive(numNeighbours) {
     // Forces you not to see big picture instantly
-    return false
+    return numNeighbours == 2 || numNeighbours === 3
   }
 };

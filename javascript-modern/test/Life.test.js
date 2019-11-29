@@ -33,4 +33,12 @@ describe("Life Tests", function () {
       expect(life.cellShouldSurvive(5)).to.equal(false);
     });
   });
+
+  describe("Survival", function () {
+    it("survives if has 2 or 3 neighbours", function () {
+      const life = new Life(new HashSet());
+      expect(life.cellShouldSurvive(2)).to.equal(true);
+      expect(life.cellShouldSurvive(3)).to.equal(true);
+    });
+  });
 });
