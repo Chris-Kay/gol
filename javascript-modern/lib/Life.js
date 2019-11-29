@@ -10,7 +10,7 @@ module.exports = class Life {
     return this._liveCells;
   }
 
-  evolve() {
+  evolve(maxX, maxY) {
     // Maybe
     const liveCells = this.getLiveCells()
     if(liveCells.size() === 0) {
@@ -24,11 +24,11 @@ module.exports = class Life {
     array.forEach(liveCell => {
       let i;
       let j;
-      for(i = -1; i < 2; i++) {
-        for(j = -1; j < 2; j++) {
+      for(i = 0; i < maxX; i++) {
+        for(j = 0; j < maxY; j++) {
           const numberOfNeighbours = this.getNeighbours(new Cell(liveCell.x + i, liveCell.y + j))
           if(this.cellShouldSurvive(numberOfNeighbours)) {
-            if(numberOfNeighbours === 3) {
+            if(numberOfNeighbours === 3 || this.getLiveCells().contains(new Cell(liveCell.x + i, liveCell.y + j))) {
               newHash.add(new Cell(liveCell.x + i, liveCell.y + j))
             }
         } else {
@@ -49,9 +49,14 @@ module.exports = class Life {
 
       for(i = -1; i < 2; i++) {
         for(j = -1; j < 2; j++) {
+          if(i === 0 && j === 0) {
+            console.log('return')
+          } else {
+
         if(this.getLiveCells().contains(new Cell(cell.x + i, cell.y + j))) {
           neighbours.push(new Cell(cell.x + i, cell.y + j))
         }
+      }
       }
     }
         return neighbours.length

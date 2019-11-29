@@ -72,4 +72,25 @@ describe("Life Tests", function () {
     expect(life.getLiveCells().contains(new Cell(3, 3))).to.equal(true);
     expect(life.getLiveCells().contains(new Cell(3, 4))).to.equal(true);
 })
+
+it.only('Given state - 7', function() {
+  const setOfCells = new HashSet();
+  setOfCells.add(new Cell(2, 5));
+  setOfCells.add(new Cell(3, 3));
+  setOfCells.add(new Cell(3, 5));
+  setOfCells.add(new Cell(4, 4));
+  setOfCells.add(new Cell(4, 5));
+
+
+  const life = new Life(setOfCells);
+  life.evolve(5, 5)
+  console.log(life.getLiveCells())
+  expect(life.getLiveCells().size()).to.equal(5);
+  expect(life.getLiveCells().contains(new Cell(3, 1))).to.equal(true);
+  expect(life.getLiveCells().contains(new Cell(2, 4))).to.equal(true);
+  expect(life.getLiveCells().contains(new Cell(3, 5))).to.equal(true);
+  expect(life.getLiveCells().contains(new Cell(4, 4))).to.equal(true);
+  expect(life.getLiveCells().contains(new Cell(4, 5))).to.equal(true);
+
+})
 });
