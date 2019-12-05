@@ -17,20 +17,22 @@ module.exports = class Life {
       return
     }
 
-    const array = liveCells.asArray()
+    const liveCellArray = liveCells.asArray()
 
     const newHash = new HashSet()
 
-    array.forEach(liveCell => {
+    liveCellArray.forEach(liveCell => {
       let i;
       let j;
-      for(i = 0; i < 2; i++) {
+      for(i = -1; i < 2; i++) {
         for(j = -1; j < 2; j++) {
-          if(liveCell + i < maxX || liveCell.y + j > maxY) return 
+          // const cellIsOutOfBounds = liveCell + i < maxX || liveCell.y + j > maxY;
+          // if(cellIsOutOfBounds) return;
 
           const numberOfNeighbours = this.getNeighbours(new Cell(liveCell.x + i, liveCell.y + j))
           if(this.cellShouldSurvive(numberOfNeighbours)) {
-            if(numberOfNeighbours === 3 || this.getLiveCells().contains(new Cell(liveCell.x + i, liveCell.y + j))) {
+            const lifeAlreadyExists = this.getLiveCells().contains(new Cell(liveCell.x + i, liveCell.y + j))
+            if(this.lifeShouldBeCreated(numberOfNeighbours) || lifeAlreadyExists) {
               newHash.add(new Cell(liveCell.x + i, liveCell.y + j))
             }
         } else {
@@ -53,12 +55,9 @@ module.exports = class Life {
         for(j = -1; j < 2; j++) {
           if(i === 0 && j === 0) {
             console.log('return')
-          } else {
-
-        if(this.getLiveCells().contains(new Cell(cell.x + i, cell.y + j))) {
+          } else if(this.getLiveCells().contains(new Cell(cell.x + i, cell.y + j))) {
           neighbours.push(new Cell(cell.x + i, cell.y + j))
-        }
-      }
+          }
       }
     }
         return neighbours.length
